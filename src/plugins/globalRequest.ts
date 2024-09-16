@@ -12,7 +12,7 @@ import { stringify } from 'querystring';
  */
 const request = extend({
   credentials: 'include', // 默认请求是否带上cookie
-  // requestType: 'form',
+  prefix: process.env.NODE_ENV === 'production' ? 'http://user-backend.ptu.cn' : undefined,
 });
 
 /**
